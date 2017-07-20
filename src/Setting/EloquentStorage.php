@@ -59,4 +59,10 @@ class EloquentStorage extends Eloquent implements SettingStorageContract
 
         $setting->delete();
     }
+    
+    public function wherelike($key, $value)
+    {
+        $setting = new static();
+        return $setting->where('key', 'like', $value.'%')->get();
+    }
 }

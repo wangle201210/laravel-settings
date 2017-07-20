@@ -44,4 +44,13 @@ interface SettingStorageContract
      * @return void
      */
     public function forget($key, $lang);
+
+    /**
+     * Get the setting like the key and value.
+     *
+     * @param  string  $key
+     * @param  mixed   $value
+     * @return array
+     */
+    public function wherelike($key, $value);
 }

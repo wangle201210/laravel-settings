@@ -23,6 +23,18 @@ class Setting
     }
 
     /**
+     * Return setting value which like the key.
+     *
+     * @param  string  $key
+     * @param  string  $value
+     * @return arry
+     */
+    public function where($key, $value)
+    {
+        return $this->storage->wherelike($key, $value);
+    }
+
+    /**
      * Return setting value or default value by key.
      *
      * @param  string  $key

@@ -38,6 +38,10 @@
 ## Usage
 
 ```php
+Setting::where('key','name');
+// get setting value with key like 'name%'
+// return array if the key like 'name%'
+
 Setting::get('name', 'Computer');
 // get setting value with key 'name'
 // return 'Computer' if the key does not exists
